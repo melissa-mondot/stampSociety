@@ -1,13 +1,63 @@
-// Add additional styles here. For example, overwrite certain styles or add new components.
-// Tip: You can use bootstrap's powerful mixins here!
+// Custom Scss
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $nanum-gothic;
+}
+.navbar {
+  .navbar-brand {
+    font-family: $sacramento;
+    font-size: 2em; }
+      
+  .navbar-nav {
+    font-family: $josefin-slab;
+    font-size: 1.5em; }
+}
+
+  // Jumbotron   
+#jumbotronMain {
+    background-image: url('/assets/img/stamp-jumbotron.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 300px;
+    
+  #jumboGradient {
+    background: linear-gradient(to right, rgba(265,265,265,0.3), rgba(265,265,265,0.7));
+    
+    h1 {
+      font-family: $nanum-gothic;
+    }
+    
+    h3 {
+      font-family: $josefin-slab;
+    }
+  }
+}
+
+// Custom Globals 
+
+.sacramento {
+  font-family: $sacramento;
+}
+
+.nanum-gothic {
+  font-family: $nanum-gothic;
+}
+
+.josefin-slab {
+  font-family: $josefin-slab;
+}
+      
 
 
-//.alert-myalert {
-//  @include alert-variant(#60667d, #1d1d1d, #f4fdff);
-//}
-
-//@each $color, $value in $theme-colors {
-//  .alert-#{$color} {
-//    box-shadow: 3px 3px theme-color-level($color, -3);
-//  }
-//}
+  

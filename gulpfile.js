@@ -5,6 +5,8 @@ var gulp  = require('gulp'),
   rename = require('gulp-rename'),
   postcss      = require('gulp-postcss'),
   autoprefixer = require('autoprefixer');
+ var browserSync = require('browser-sync').create();
+  
 
 gulp.task('build-theme', function() {
   return gulp.src(['scss/*.scss'])
@@ -27,12 +29,21 @@ gulp.task('build-theme', function() {
     .pipe(gulp.dest('css/'))
 });
 
-gulp.task('watch', ['build-theme'], function() {
+gulp.task('serve', function() {
+    // Serve files from cloud
+    browserSync.init({
+      open: 'external',
+      port: 8080,
+      proxy: 'http://stampSociety-thinkmodes.codeanyapp.com'
+    });
+});
+
+gulp.task('watch', ['build-theme', 'serve'], function() {
   gulp.watch(['scss/*.scss'], ['build-theme']);
 });
 
-gulp.task('default', ['build-theme'], function() {
+gulp.task('default', ['build-theme', 'serve'], function() {
+  gulp.watch(['scss/*.scss'], ['build-theme']);
 });
-
 
 
