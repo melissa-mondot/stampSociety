@@ -33,16 +33,22 @@ gulp.task('serve', function() {
     // Serve files from cloud
     browserSync.init({
       open: 'external',
-      port: 8080,
-      proxy: 'http://stampSociety-thinkmodes.codeanyapp.com'
+      host: 'http://stampsociety-thinkmodes.codeanyapp.com/',
+      proxy: 'http://stampsociety-thinkmodes.codeanyapp.com/',
+      port: 8080
     });
 });
 
-gulp.task('watch', ['build-theme', 'serve'], function() {
+gulp.task('bs-watch', ['build-theme'], function(done) {
+  browserSync.reload();
+  done();
+});
+
+gulp.task('watch', ['bs-watch', 'build-theme'], function() {
   gulp.watch(['scss/*.scss'], ['build-theme']);
 });
 
-gulp.task('default', ['build-theme', 'serve'], function() {
+gulp.task('default', ['build-theme'], function() {
   gulp.watch(['scss/*.scss'], ['build-theme']);
 });
 

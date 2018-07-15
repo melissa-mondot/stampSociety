@@ -16,12 +16,25 @@ body {
 .navbar {
   .navbar-brand {
     font-family: $sacramento;
-    font-size: 2em; }
+    font-size: 2em; 
+  }
       
-  .navbar-nav {
+  .nav-link {
     font-family: $josefin-slab;
-    font-size: 1.5em; }
-}
+    font-size: 1.5em;
+    color: $white;
+    border-bottom: 2px transparent solid;
+    &:hover {
+      border-bottom: 2px $white solid;
+      transition: border 1s ease;
+    }
+  }
+  a > .btn {
+      &:hover {
+        transition: background 1s ease;
+      }
+    }
+  }  
 
   // Jumbotron   
 #jumbotronMain {
@@ -29,35 +42,81 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 300px;
     
   #jumboGradient {
-    background: linear-gradient(to right, rgba(265,265,265,0.3), rgba(265,265,265,0.7));
-    
-    h1 {
-      font-family: $nanum-gothic;
-    }
-    
-    h3 {
-      font-family: $josefin-slab;
+    background: rgba(265,265,265,0.6);
+  }
+}
+
+#newsletterForm {
+  button {
+    &:hover {
+      background: #fff;
+      transition: background 1s ease;
     }
   }
 }
 
-// Custom Globals 
+     
+#sacapexInfo {
+  a {
+    text-decoration: none;
+  }
+  .card-header {
+    background: $info;
+    color: #fff;
+    &:hover {
+      transition: ease 1s background-color;
+      background: #fff;
+      color: $success;
+      border: solid 1px $success;
+    }
+  }
+    .card {
+      background: $gray-400;
+      .panel {
+        padding: 0 5px;
+      }
+    }
+    
+  #dealerTable {
+    max-height: 400px;
+    overflow-y: scroll;
+    }
+  }
+
+// SPS History
+#ourHistory {
+  background: linear-gradient(to bottom, #d7d7d7, #fff)
+}
+
+#footer {
+  a > .btn{
+    &:hover {
+    background: #fff;
+    transition: background 1s ease;
+  }
+}
+}
+// Custom Globals   
 
 .sacramento {
-  font-family: $sacramento;
+  font-family: $sacramento; 
 }
 
 .nanum-gothic {
-  font-family: $nanum-gothic;
+  font-family: $nanum-gothic; 
 }
 
 .josefin-slab {
   font-family: $josefin-slab;
-}
-      
+  }
 
-
-  
+.btn-primary {
+  border: 1px solid $primary;
+    &:hover {
+      transition: background-color 1s ease;
+      color: $primary;
+      background: #fff;
+      }
+    }
