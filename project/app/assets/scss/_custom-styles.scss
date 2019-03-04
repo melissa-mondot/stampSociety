@@ -1,0 +1,165 @@
+// Custom Scss
+
+body {
+  font-family: $nanum-gothic;
+
+  nav.navbar {
+    .navbar-brand {
+      font-family: Sacramento, cursive;
+      font-size: 2em;
+    }
+
+    .nav-link {
+      font-family: "Josefin Slab", serif;
+      font-size: 1.5em;
+      color: #fff;
+      border-bottom: 2px transparent solid;
+
+      &:hover {
+        border-bottom: 2px #fff solid;
+        transition: border 1s ease;
+      }
+    }
+
+    button.btn.btn-primary {
+      border: 1px solid #a40000;
+      @include buttonstyle;
+    }
+  }
+
+  div#jumbotron-main {
+    background: url(../img/stampJumbotron.jpg)no-repeat center;
+    background-size: cover;
+    height: 40vh;
+  }
+
+  div#sacapex-info {
+    .card {
+      a {
+        text-decoration: none;
+
+        .card-header {
+          background: #53A2BE;
+          color: #fff;
+
+        }
+      }
+
+      div.panel {
+        div#dealer-table {
+          max-height: 40vh;
+          overflow: hidden;
+          overflow-y: scroll;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+/*
+
+
+
+#our-history button.btn.btn-primary,
+div#membership-info .btn.btn-primary,
+footer#sps-footer button.btn.btn-primary,
+form#exhibForm button.btn.btn-primary {
+  border: 1px solid #a40000;
+}
+
+
+#newsletter-form button:hover {
+  background: #fff;
+  -webkit-transition: background 1s ease;
+  transition: background 1s ease;
+}
+
+div {
+  &#membership-info {
+    p {
+      &.h1 {
+        font-family: Sacramento, cursive;
+      }
+
+      &.h2 {
+        font-family: "Josefin Slab", serif;
+      }
+    }
+
+    .btn.btn-primary:hover {
+      -webkit-transition: background-color 1s ease;
+      transition: background-color 1s ease;
+      color: #a40000;
+      background: #fff;
+    }
+  }
+
+  &#events p {
+    &.h1 {
+      font-family: Sacramento, cursive;
+    }
+
+    &.h3 {
+      font-family: "Josefin Slab", serif;
+    }
+  }
+}
+
+footer#sps-footer #contact p {
+  font-family: "Josefin Slab", serif;
+}
+
+#our-history {
+  background: -webkit-gradient(linear, left top, left bottom, from(#d7d7d7), to(#fff));
+  background: linear-gradient(to bottom, #d7d7d7, #fff);
+
+  button.btn.btn-primary:hover {
+    transition: background-color 1s ease;
+    color: #a40000;
+    background: #fff;
+  }
+}
+
+footer#sps-footer button.btn.btn-primary:hover {
+  -webkit-transition: background-color 1s ease;
+  transition: background-color 1s ease;
+  color: #a40000;
+  background: #fff;
+}
+
+form#exhibForm {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f8f9fa), color-stop(#53A2BE), to(#f8f9fa));
+  background-image: linear-gradient(#f8f9fa, #53A2BE, #f8f9fa);
+
+  button.btn.btn-primary:hover {
+    -webkit-transition: background-color 1s ease;
+    transition: background-color 1s ease;
+    color: #a40000;
+    background: #fff;
+  }
+}
+
+#form-success {
+  display: none;
+}
+
+
+
+    &:hover {
+      -webkit-transition: background-color 1s ease;
+      transition: background-color 1s ease;
+      color: #a40000;
+      background: #fff;
+    }
+  }
+}
+
+// exhibitor info page
+
+form.form {
+  background-image: linear-gradient($light, $info);
+}
+*/

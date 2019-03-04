@@ -1,32 +1,36 @@
 {
-  "name": "theme-kit",
-  "version": "1.0.0",
-  "description": "A starter project to build your own Bootstrap 4 themes",
-  "repository": "https://github.com/HackerThemes/theme-kit",
+  "name": "sps",
+  "version": "4.0.0",
+  "description": "Sac Stamp Society dev",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gulp build && firebase deploy --project"
   },
-  "keywords": [
-    "bootstrap",
-    "themes"
-  ],
-  "author": "Alexander Rechsteiner",
-  "license": "MIT",
-  "dependencies": {
-    "bootstrap": "^4.1.2",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.14.3"
-  },
+  "author": "TMD",
+  "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^8.6.5",
-    "browser-sync": "^2.24.5",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.9.4",
-    "gulp-postcss": "^7.0.1",
-    "gulp-rename": "^1.3.0",
+    "bootstrap": "^4.3.1",
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "eslint": "^5.14.1",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-remove-html": "^1.3.0",
+    "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
-    "gulp-scss-lint": "^0.6.1",
-    "gulp-sourcemaps": "^2.6.4"
-  }
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^6.0.0",
+    "jquery": "^3.3.1",
+    "wait-stream": "1.2.0"
+  },
+  "dependencies": {}
 }
