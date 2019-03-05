@@ -4,33 +4,37 @@ body {
   font-family: $nanum-gothic;
 
   nav.navbar {
+    //@include gradient-y-three-colors;
     .navbar-brand {
       font-family: Sacramento, cursive;
       font-size: 2em;
     }
 
     .nav-link {
-      font-family: "Josefin Slab", serif;
-      font-size: 1.5em;
-      color: #fff;
-      border-bottom: 2px transparent solid;
-
-      &:hover {
-        border-bottom: 2px #fff solid;
-        transition: border 1s ease;
-      }
+      @include navlink;
     }
 
     button.btn.btn-primary {
-      border: 1px solid #a40000;
+      border: 1px solid $primary;
       @include buttonstyle;
     }
   }
 
   div#jumbotron-main {
-    background: url(../img/stampJumbotron.jpg)no-repeat center;
+    background: url(../img/easter-seals.jpg)no-repeat center;
+   bottom: 0;
     background-size: cover;
-    height: 40vh;
+    height: 80vh;
+    padding: 5rem;
+    @include media-breakpoint-up(md) {
+      height: 90vh;
+    }
+    div.text-white, button.btn a {
+      color: $white;
+    @include media-breakpoint-up(md) {
+      padding-top: 15vh;
+    } 
+  }
   }
 
   div#sacapex-info {
@@ -54,81 +58,57 @@ body {
       }
     }
   }
+
+  div#newsletter-form {
+    background: $secondary;
+  }
+
+  div#membership-info {
+    a.btn.btn-primary {
+      @include buttonstyle;
+    }
+  }
+
+  div#events {
+    background: $secondary;
+  }
+
+  div#our-history {
+    background: linear-gradient(to bottom, #d7d7d7, #fff);
+
+    button.btn.btn-primary {
+      @include buttonstyle;
+    }
+  }
+
+  footer#sps-footer {
+
+    a.nav-link {
+      color: $white;
+      @include navlink;
+    }
+  }
 }
 
+// exhibitor info page
+
+
+div#exhibitor-form-container {
+  background-image: linear-gradient($light, $info);
+  form.form {
+    margin: 0 5rem;
+    button {
+      @include buttonstyle;
+      margin: 0 0 1rem 1rem;
+    }
+  }
+}
 
 
 
 /*
 
 
-
-#our-history button.btn.btn-primary,
-div#membership-info .btn.btn-primary,
-footer#sps-footer button.btn.btn-primary,
-form#exhibForm button.btn.btn-primary {
-  border: 1px solid #a40000;
-}
-
-
-#newsletter-form button:hover {
-  background: #fff;
-  -webkit-transition: background 1s ease;
-  transition: background 1s ease;
-}
-
-div {
-  &#membership-info {
-    p {
-      &.h1 {
-        font-family: Sacramento, cursive;
-      }
-
-      &.h2 {
-        font-family: "Josefin Slab", serif;
-      }
-    }
-
-    .btn.btn-primary:hover {
-      -webkit-transition: background-color 1s ease;
-      transition: background-color 1s ease;
-      color: #a40000;
-      background: #fff;
-    }
-  }
-
-  &#events p {
-    &.h1 {
-      font-family: Sacramento, cursive;
-    }
-
-    &.h3 {
-      font-family: "Josefin Slab", serif;
-    }
-  }
-}
-
-footer#sps-footer #contact p {
-  font-family: "Josefin Slab", serif;
-}
-
-#our-history {
-  background: -webkit-gradient(linear, left top, left bottom, from(#d7d7d7), to(#fff));
-  background: linear-gradient(to bottom, #d7d7d7, #fff);
-
-  button.btn.btn-primary:hover {
-    transition: background-color 1s ease;
-    color: #a40000;
-    background: #fff;
-  }
-}
-
-footer#sps-footer button.btn.btn-primary:hover {
-  -webkit-transition: background-color 1s ease;
-  transition: background-color 1s ease;
-  color: #a40000;
-  background: #fff;
-}
 
 form#exhibForm {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f8f9fa), color-stop(#53A2BE), to(#f8f9fa));
