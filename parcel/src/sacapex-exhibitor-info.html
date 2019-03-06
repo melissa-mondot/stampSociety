@@ -6,7 +6,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-  <link rel="stylesheet" href="./assets/css/main.min.css">
+  <link rel="stylesheet" href="./assets/scss/main.scss">
   <!--recaptcha-->
   <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
@@ -14,37 +14,13 @@
 <body id="exhibitor" id="topNav" class="100vw">
 
   <!-- NAV -->
-  <div class="container-fluid bg-primary">
-    <nav class="navbar sticky-top navbar-dark bg-primary navbar-expand-lg px-lg-5 px-sm-2 mx-auto">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="index.html"><img src="./assets/img/spsLogoDarkNav.png" alt="Sacramento Philatelic Society"
-          height="120"> </a>
-
-      <div class="collapse navbar-collapse" id="collapsingNavbar">
-        <ul class="navbar-nav nav-justified ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html#events">Events</a>
-          </li>
-
-
-          <li class="nav-item">
-            <a class="nav-link text-nowrap" href="./index.html#our-history">Our History</a>
-          </li>
-          <li>
-            <a href="#contact"><button class="btn btn-outline-light btn-lg">Contact Us</button></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-  <!-- NAV ENDS -->
-  <div id="jumbotron-main" class="jumbotron-fluid"></div>
+  <include src="./nav.html"></include> 
+ 
+  <!--Jumbotron-->
+  <include src="./jumbotron.html"></include>
   <div class="pl-5 pt-5">
     <h1>Would you like to be an exhibitor at Sacapex 2018?</h1>
-    <p>Wonderful! Please fill out the form below, or print this form <a href="#">here</a> and return it to us by mail.</p>
+    <p>Great! Please fill out the form below, or print this form <a href="#">here</a> and return it to us by mail.</p>
   </div>
   <div id="exhibitor-form-container" class="container-fluid">
     <form class="form" action="">
@@ -165,48 +141,9 @@
   </div>
 
   <!-- Footer -->
-  <footer class="footer bg-dark pt-lg-5 pt-sm-2" id="sps-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-sm-12">
-          <a class="navbar navbar-brand"><img class="img-fluid" src="./assets/img/spsLogoDarkNav.png" height="120"
-              width="240" alt=""></a>
-          <p class="text-light">Sacramento's Stamp Club since 1914</p>
-        </div>
+  <include src="./footer.html"></include>
 
-        <div id="contact" class="col-lg-6 col-sm-12">
-          <p class="h4 text-left text-white-50">Contact Us</p>
-          <form action="https://formspree.io/joannebe@pacbell.net" method="POST">
-            <fieldset class="form-group">
-              <input class="form-control" id="InputEmailFooter" name="_replyto" placeholder="name@email.com" type="email">
-            </fieldset>
-
-
-            <fieldset class="form-group">
-              <textarea class="form-control" id="messageFromFooter" name="_" placeholder="Please enter your message here"></textarea>
-            </fieldset>
-
-
-            <fieldset class="form-group text-xs-right">
-              <button class="btn btn-primary btn-lg" type="submit" value="Send ">Send</button>
-            </fieldset>
-          </form>
-        </div>
-      </div>
-      <nav class="nav justify-content-center text-light py-3">
-        <a class="nav-link" href="aboutus.html"> Our Members</a>
-        <a class="nav-link" download="spsScholarshipForm" href="/assets/spsScholarshipForm.pdf">Membership</a>
-        <a class="nav-link" download="spsBylaws" href="/assets/SPSbylaws_100913.pdf">By-Laws</a>
-        <a class="nav-link disabled" href="">Newsletter Archives<span class="text-muted"><small> Coming Soon</small></span></a>
-
-      </nav>
-    </div>
-
-  </footer>
-
-  <script src="./assets/js/common.js"></script>
-  <script src="./assets/libs/jquery/jquery.min.js"></script>
-  <script src="./assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="./index.js"></script>
 
 
 </body>

@@ -3,7 +3,9 @@
 body {
   font-family: $nanum-gothic;
 
+
   nav.navbar {
+
     //@include gradient-y-three-colors;
     .navbar-brand {
       font-family: Sacramento, cursive;
@@ -22,22 +24,33 @@ body {
 
   div#jumbotron-main {
     background: url(../img/easter-seals.jpg)no-repeat center;
-   bottom: 0;
+    bottom: 0;
     background-size: cover;
     height: 80vh;
-    padding: 5rem;
+    padding: 1rem;
+
     @include media-breakpoint-up(md) {
       height: 90vh;
     }
-    div.text-white, button.btn a {
+
+    div.text-white,
+    button.btn a {
       color: $white;
-    @include media-breakpoint-up(md) {
-      padding-top: 15vh;
-    } 
-  }
+
+      @include media-breakpoint-up(md) {
+        padding-top: 15vh;
+      }
+    }
   }
 
   div#sacapex-info {
+    padding: 1rem;
+
+    hr {
+      border-bottom: 5px solid $secondary;
+      border-radius: 5px;
+    }
+
     .card {
       a {
         text-decoration: none;
@@ -45,11 +58,12 @@ body {
         .card-header {
           background: #53A2BE;
           color: #fff;
-
         }
       }
 
       div.panel {
+        padding: 0 1.5rem;
+
         div#dealer-table {
           max-height: 40vh;
           overflow: hidden;
@@ -61,31 +75,76 @@ body {
 
   div#newsletter-form {
     background: $secondary;
+    color: $light;
+    text-align: center;
+    padding: 1rem;
+
+    @include media-breakpoint-up(md) {
+      padding: 1rem 10rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 1rem 15rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding: 1rem 20rem;
+    }
   }
 
   div#membership-info {
+    padding: 1rem;
+
     a.btn.btn-primary {
       @include buttonstyle;
     }
   }
 
   div#events {
+    padding: 1rem;
     background: $secondary;
+    color: $light;
+
   }
 
   div#our-history {
     background: linear-gradient(to bottom, #d7d7d7, #fff);
+    padding: 1rem;
 
-    button.btn.btn-primary {
+    @include media-breakpoint-up(md) {
+      padding: 3rem;
+    }
+
+    button.btn.btn-secondary {
       @include buttonstyle;
+      margin-bottom: 1rem;
+    }
+
+    img.img-fluid {
+      float: right;
+      margin-left: 3rem;
+
+      @include media-breakpoint-up(md) {
+        max-width: 40vw;
+      }
+
+      @include media-breakpoint-up(lg) {
+        max-width: 30vw;
+      }
     }
   }
 
   footer#sps-footer {
-
-    a.nav-link {
-      color: $white;
-      @include navlink;
+    width: 100vw;
+    padding: 1rem;
+    background: $dark;
+    color: $light;
+    nav {
+      text-align: center;
+      a.nav-link {
+        color: $white;
+        @include navlink;
+      }
     }
   }
 }
@@ -95,51 +154,13 @@ body {
 
 div#exhibitor-form-container {
   background-image: linear-gradient($light, $info);
+
   form.form {
     margin: 0 5rem;
+
     button {
       @include buttonstyle;
       margin: 0 0 1rem 1rem;
     }
   }
 }
-
-
-
-/*
-
-
-
-form#exhibForm {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f8f9fa), color-stop(#53A2BE), to(#f8f9fa));
-  background-image: linear-gradient(#f8f9fa, #53A2BE, #f8f9fa);
-
-  button.btn.btn-primary:hover {
-    -webkit-transition: background-color 1s ease;
-    transition: background-color 1s ease;
-    color: #a40000;
-    background: #fff;
-  }
-}
-
-#form-success {
-  display: none;
-}
-
-
-
-    &:hover {
-      -webkit-transition: background-color 1s ease;
-      transition: background-color 1s ease;
-      color: #a40000;
-      background: #fff;
-    }
-  }
-}
-
-// exhibitor info page
-
-form.form {
-  background-image: linear-gradient($light, $info);
-}
-*/

@@ -1,5 +1,5 @@
 @import 'custom-variables'; 
-@import 'mixins';
-@import './vendors/scss/bootstrap.scss';
+@import 'custom-mixins';
+@import '~bootstrap/scss/bootstrap';
 @import 'custom-styles';
 
