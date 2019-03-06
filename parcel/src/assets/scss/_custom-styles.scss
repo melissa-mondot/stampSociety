@@ -105,6 +105,13 @@ body {
     background: $secondary;
     color: $light;
 
+    @include media-breakpoint-up(md) {
+      padding: 3rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 5rem 10rem;
+    }
   }
 
   div#our-history {
@@ -139,14 +146,43 @@ body {
     padding: 1rem;
     background: $dark;
     color: $light;
+
+    div#footer-flow {
+      @include media-breakpoint-up(md) {
+        display: flex;
+        flex: auto;
+        justify-content: space-between;
+      }
+
+      div#contact {
+        width: 50%;
+      }
+    }
+
     nav {
+      display: flex;
+      flex: auto;
+      justify-content: center;
       text-align: center;
+
       a.nav-link {
         color: $white;
         @include navlink;
+        font-size: 1rem;
       }
     }
+
+    p {
+      font-size: .75rem;
+      padding: 0 auto;
+      margin: 0 auto;
+      text-align: center;
+    }
   }
+}
+
+.tmd {
+  font-size: .5rem;
 }
 
 // exhibitor info page
@@ -156,11 +192,15 @@ div#exhibitor-form-container {
   background-image: linear-gradient($light, $info);
 
   form.form {
-    margin: 0 5rem;
+    margin: 0 1rem;
 
     button {
       @include buttonstyle;
       margin: 0 0 1rem 1rem;
     }
   }
+}
+
+div#easterseals {
+  text-align: center;
 }
