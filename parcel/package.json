@@ -4,7 +4,6 @@
   "description": "Sac Stamp Society dev",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "npm run build && firebase deploy",
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html"
@@ -14,7 +13,7 @@
   "devDependencies": {
     "bootstrap": "^4.3.1",
     "cssnano": "^4.1.10",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.1",
     "popper.js": "^1.14.7",
     "sass": "^1.17.2"
   },

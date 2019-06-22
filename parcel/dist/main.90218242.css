@@ -9785,7 +9785,7 @@ body nav.navbar button.btn.btn-primary:hover {
   border: 1px solid #a40000;
 }
 body div#jumbotron-main {
-  background: url(easter-seals.d5bda6c5.jpg) no-repeat center;
+  background: url(/easter-seals.d5bda6c5.jpg) no-repeat center;
   bottom: 0;
   background-size: cover;
   height: 80vh;
@@ -9977,3 +9977,5 @@ div#exhibitor-form-container form.form button:hover {
 div#easterseals {
   text-align: center;
 }
+
+/*# sourceMappingURL=/main.90218242.css.map */
