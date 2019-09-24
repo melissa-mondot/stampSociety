@@ -3,9 +3,7 @@
 body {
   font-family: $nanum-gothic;
 
-
   nav.navbar {
-
     //@include gradient-y-three-colors;
     .navbar-brand {
       font-family: Sacramento, cursive;
@@ -23,19 +21,21 @@ body {
   }
 
   div#jumbotron-main {
-    background: url(../img/easter-seals.jpg)no-repeat center;
+    background: url(../img/fall-leaves.jpg) no-repeat center;
     bottom: 0;
     background-size: cover;
     height: 80vh;
     padding: 1rem;
 
+
     @include media-breakpoint-up(md) {
       height: 90vh;
     }
 
-    div.text-white,
+    div.text-dark,
     button.btn a {
-      color: $white;
+      // color: $dark;
+      text-shadow: 3px 5px 8px grey;
 
       @include media-breakpoint-up(md) {
         padding-top: 15vh;
@@ -56,7 +56,7 @@ body {
         text-decoration: none;
 
         .card-header {
-          background: #53A2BE;
+          background: #53a2be;
           color: #fff;
         }
       }
@@ -173,7 +173,7 @@ body {
     }
 
     p {
-      font-size: .75rem;
+      font-size: 0.75rem;
       padding: 0 auto;
       margin: 0 auto;
       text-align: center;
@@ -182,11 +182,10 @@ body {
 }
 
 .tmd {
-  font-size: .5rem;
+  font-size: 0.5rem;
 }
 
 // exhibitor info page
-
 
 div#exhibitor-form-container {
   background-image: linear-gradient($light, $info);

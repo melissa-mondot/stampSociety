@@ -9785,7 +9785,7 @@ body nav.navbar button.btn.btn-primary:hover {
   border: 1px solid #a40000;
 }
 body div#jumbotron-main {
-  background: url(/easter-seals.d5bda6c5.jpg) no-repeat center;
+  background: url(/fall-leaves.498e173e.jpg) no-repeat center;
   bottom: 0;
   background-size: cover;
   height: 80vh;
@@ -9796,12 +9796,12 @@ body div#jumbotron-main {
     height: 90vh;
   }
 }
-body div#jumbotron-main div.text-white,
+body div#jumbotron-main div.text-dark,
 body div#jumbotron-main button.btn a {
-  color: #fff;
+  text-shadow: 3px 5px 8px grey;
 }
 @media (min-width: 768px) {
-  body div#jumbotron-main div.text-white,
+  body div#jumbotron-main div.text-dark,
 body div#jumbotron-main button.btn a {
     padding-top: 15vh;
   }
@@ -9817,7 +9817,7 @@ body div#sacapex-info .card a {
   text-decoration: none;
 }
 body div#sacapex-info .card a .card-header {
-  background: #53A2BE;
+  background: #53a2be;
   color: #fff;
 }
 body div#sacapex-info .card div.panel {

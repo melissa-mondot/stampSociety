@@ -1,8 +1,10 @@
 ---
 templateKey: about
 title: History of the Sacramento Philatelic Society
-image: /img/pony-express.jpg
+# featuredImage: ./pony-express-desktop.jpg
 ---
+
+![Pony Express Stamps](./pony-express-desktop.jpg)
 
 # Our Club History
 

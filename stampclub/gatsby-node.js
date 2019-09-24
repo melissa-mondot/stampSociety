@@ -14,6 +14,7 @@ exports.createPages = ({ actions, graphql }) => {
               slug
             }
             frontmatter {
+              featuredImage
               templateKey
             }
           }
@@ -29,9 +30,12 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach(edge => {
       const id = edge.node.id
+      console.log(edge.node.frontmatter.featuredImage)
+
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
+        src: edge.node.frontmatter.featuredImage,
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
