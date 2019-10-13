@@ -8,6 +8,9 @@ body {
     .navbar-brand {
       font-family: Sacramento, cursive;
       font-size: 2em;
+      .nav-img {
+        height: 100%;
+      }
     }
 
     .nav-link {
@@ -26,7 +29,6 @@ body {
     background-size: cover;
     height: 80vh;
     padding: 1rem;
-
 
     @include media-breakpoint-up(md) {
       height: 90vh;
@@ -66,13 +68,24 @@ body {
 
         div#dealer-table {
           max-height: 40vh;
-          overflow: hidden;
+          overflow-y: hidden;
           overflow-y: scroll;
+
+          table {
+            width: 100%;
+            tbody {
+              tr {
+                border-bottom: rgba(0, 0, 0, 0.4) 1px solid;
+              }
+            }
+          }
         }
       }
     }
   }
-
+  table {
+    width: 100%;
+  }
   div#newsletter-form {
     background: $secondary;
     color: $light;
@@ -154,9 +167,9 @@ body {
         justify-content: space-between;
       }
 
-      div#contact {
-        width: 50%;
-      }
+      // div#contact {
+      //   width: 50%;
+      // }
     }
 
     nav {
@@ -202,4 +215,8 @@ div#exhibitor-form-container {
 
 div#easterseals {
   text-align: center;
+}
+
+.scroll-shrink {
+  max-height: 3rem;
 }

@@ -9763,6 +9763,9 @@ body nav.navbar .navbar-brand {
   font-family: Sacramento, cursive;
   font-size: 2em;
 }
+body nav.navbar .navbar-brand .nav-img {
+  height: 100%;
+}
 body nav.navbar .nav-link {
   font-family: "Josefin Slab", serif;
   font-size: 1.5em;
@@ -9825,8 +9828,17 @@ body div#sacapex-info .card div.panel {
 }
 body div#sacapex-info .card div.panel div#dealer-table {
   max-height: 40vh;
-  overflow: hidden;
+  overflow-y: hidden;
   overflow-y: scroll;
+}
+body div#sacapex-info .card div.panel div#dealer-table table {
+  width: 100%;
+}
+body div#sacapex-info .card div.panel div#dealer-table table tbody tr {
+  border-bottom: rgba(0, 0, 0, 0.4) 1px solid;
+}
+body table {
+  width: 100%;
 }
 body div#newsletter-form {
   background: #0F4C5C;
@@ -9924,9 +9936,6 @@ body footer#sps-footer {
     justify-content: space-between;
   }
 }
-body footer#sps-footer div#footer-flow div#contact {
-  width: 50%;
-}
 body footer#sps-footer nav {
   display: flex;
   flex: auto;
@@ -9976,6 +9985,10 @@ div#exhibitor-form-container form.form button:hover {
 
 div#easterseals {
   text-align: center;
+}
+
+.scroll-shrink {
+  max-height: 3rem;
 }
 
 /*# sourceMappingURL=/main.90218242.css.map */
