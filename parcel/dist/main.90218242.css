@@ -9756,31 +9756,40 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.scroll-shrink {
+  height: 3.5rem;
+  transition: height 0.5s;
+}
+
 body {
   font-family: "Nanum Gothic", sans-serif;
 }
-body nav.navbar .navbar-brand {
+body .mainNavbar .container {
+  transition: all 0.5s;
+}
+body .mainNavbar .container .navbar-brand {
   font-family: Sacramento, cursive;
   font-size: 2em;
 }
-body nav.navbar .navbar-brand .nav-img {
-  height: 100%;
+body .mainNavbar .container .navbar-brand .nav-img {
+  transition: height 0.5s;
+  max-height: 5rem;
 }
-body nav.navbar .nav-link {
+body .mainNavbar .container .nav-link {
   font-family: "Josefin Slab", serif;
   font-size: 1.5em;
   color: #fff;
   border-bottom: 2px transparent solid;
 }
-body nav.navbar .nav-link:hover {
+body .mainNavbar .container .nav-link:hover {
   border-bottom: 2px #fff solid;
   transition: border 1s ease;
 }
-body nav.navbar button.btn.btn-primary {
+body .mainNavbar .container button.btn.btn-primary {
   border: 1px solid #a40000;
   border: 1px solid #a40000;
 }
-body nav.navbar button.btn.btn-primary:hover {
+body .mainNavbar .container button.btn.btn-primary:hover {
   -webkit-transition: ease 1s background-color;
   transition: ease 1s background-color;
   background: #fff;
@@ -9985,10 +9994,6 @@ div#exhibitor-form-container form.form button:hover {
 
 div#easterseals {
   text-align: center;
-}
-
-.scroll-shrink {
-  max-height: 3rem;
 }
 
 /*# sourceMappingURL=/main.90218242.css.map */

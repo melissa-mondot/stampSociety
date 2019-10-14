@@ -1,25 +1,32 @@
 // Custom Scss
+.scroll-shrink {
+  height: 3.5rem;
+  transition: height 0.5s;
+}
 
 body {
   font-family: $nanum-gothic;
 
-  nav.navbar {
-    //@include gradient-y-three-colors;
-    .navbar-brand {
-      font-family: Sacramento, cursive;
-      font-size: 2em;
-      .nav-img {
-        height: 100%;
+  .mainNavbar {
+    .container {
+      transition: all 0.5s;
+      .navbar-brand {
+        font-family: Sacramento, cursive;
+        font-size: 2em;
+        .nav-img {
+          transition: height 0.5s;
+          max-height: 5rem;
+        }
       }
-    }
 
-    .nav-link {
-      @include navlink;
-    }
+      .nav-link {
+        @include navlink;
+      }
 
-    button.btn.btn-primary {
-      border: 1px solid $primary;
-      @include buttonstyle;
+      button.btn.btn-primary {
+        border: 1px solid $primary;
+        @include buttonstyle;
+      }
     }
   }
 
@@ -215,8 +222,4 @@ div#exhibitor-form-container {
 
 div#easterseals {
   text-align: center;
-}
-
-.scroll-shrink {
-  max-height: 3rem;
 }
