@@ -1,25 +1,17 @@
+import React from "react";
+import { Switch, Route, Link } from "react-router-dom";
 import { MainNav, MainFooter } from "./layout";
-import {
-	Hero,
-	EasterSeals,
-	Annoucements,
-	Newsletter,
-	MembershipInfo,
-  Events,
-  History
-} from "./sections";
+import { Home, Leadership } from "./views";
 
 function App() {
 	return (
 		<div className="App">
 			<MainNav />
-			<Hero />
-			<Annoucements />
-			<EasterSeals />
-			<Newsletter />
-			<MembershipInfo />
-			<Events />
-			<History />
+			{/* main view */}
+			<Switch>
+				<Route exact path="/" component={Home} />
+				<Route path="/sps-leadership" component={Leadership} />
+			</Switch>
 			<MainFooter />
 		</div>
 	);

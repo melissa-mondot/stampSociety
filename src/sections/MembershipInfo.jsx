@@ -1,25 +1,31 @@
 import React from "react";
-import { Col, Container, Image, Row, ButtonGroup, Button } from "../layout";
+import {
+	Col,
+	Container,
+	Image,
+	Row,
+	ButtonGroup,
+	Button,
+	Card,
+} from "../layout";
 // import easterSealsMap from "../img/easterSealsMap.png";
 import zoomImage from "../img/zoom.png";
 
 const MembershipInfo = () => {
 	return (
 		<Container className="mx-auto my-3">
-			<Row>
-				<Col>
+			<Row className="d-flex align-items-center">
+				<Col sm={8}>
 					<p class="h3">Curious about stamp collecting?</p>
 					<p>
 						<em>We'd love to meet you!</em> We meet every Wednesday from 7-9 PM
 						with Zoom!.
 					</p>
 				</Col>
-				<Col>
+				<Col xs={4}>
 					<Image fluid src={zoomImage} />
 				</Col>
-			</Row>
-			<Row>
-				<Col>
+				<Col xs={12}>
 					<p class="h2">Ready to join?</p>
 					<p>
 						Great! You'll be joining a fellowship of nearly 200 stamp

@@ -10,9 +10,10 @@ import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
-import Jumbotron from "react-bootstrap/Jumbotron"
-import InputGroup from "react-bootstrap/InputGroup"
-import ButtonGroup from 'react-bootstrap/ButtonGroup'
+import Jumbotron from "react-bootstrap/Jumbotron";
+import InputGroup from "react-bootstrap/InputGroup";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
+import Card from "react-bootstrap/Card";
 export {
 	MainNav,
 	MainFooter,
@@ -23,8 +24,9 @@ export {
 	Container,
 	Col,
 	Form,
-    Row,
-    Jumbotron,
-    InputGroup,
-    ButtonGroup
+	Row,
+	Jumbotron,
+	InputGroup,
+	ButtonGroup,
+	Card,
 };

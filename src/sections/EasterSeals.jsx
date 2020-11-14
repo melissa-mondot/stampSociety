@@ -23,24 +23,9 @@ const EasterSeals = () => {
 					</p>
 					<Row>
 						<Col>
-							{/* Unknown */}
-							{/* <p class="text-left">
-								3205 Hurley Way <br />
-								Sacramento, CA 95864
-							</p>
-							<a
-								href="https://goo.gl/maps/aoSbMNR61Q8egXpT8"
-								noreferrer=""
-								noopener=""
-								target="_blank"
-								class="btn btn-info"
-							>
-								Directions{" "}
-								<i class="fal fa-location-circle" aria-hidden="true"></i>
-							</a> */}
 							<div class="btn-group pt-2">
 								<a
-									href=""
+									href="/"
 									class="btn btn-sm btn-info disabled"
 									disabled=""
 									aria-disabled="true"
