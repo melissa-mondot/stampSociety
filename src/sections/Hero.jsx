@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Jumbotron } from "../layout";
+import {heroData} from "../docs/heroData"
 
 const Hero = () => {
 	return (
@@ -7,10 +8,10 @@ const Hero = () => {
 			<Container fluid className="hero-bg">
 				<Jumbotron fluid className="transparent-bg mb-0">
 					<Container>
-						<h1>Lorem ipsum</h1>
-						<h2>Lorem ipsum dolor sit.</h2>
+	<h1>{heroData.headline}</h1>
+	<h2>{heroData.subHeadline}</h2>
 						<hr />
-						<h3 className="text-right">11th & 12th of Qui, 3029</h3>
+	<h3 className="text-right">{heroData.dates}</h3>
 					</Container>
 					<Container fluid className="text-right">
 						<p>

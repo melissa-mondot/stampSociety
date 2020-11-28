@@ -6,7 +6,7 @@ import {
 	Row,
 	ButtonGroup,
 	Button,
-	Card,
+	// Card,
 } from "../layout";
 // import easterSealsMap from "../img/easterSealsMap.png";
 import zoomImage from "../img/zoom.png";

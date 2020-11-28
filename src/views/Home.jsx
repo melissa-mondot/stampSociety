@@ -2,7 +2,7 @@ import React from "react";
 import {
 	Hero,
 	EasterSeals,
-	Annoucements,
+	Announcements,
 	Newsletter,
 	MembershipInfo,
 	Events,
@@ -13,7 +13,7 @@ const Home = () => {
 	return (
 		<>
 			<Hero />
-			<Annoucements />
+			<Announcements />
 			<EasterSeals />
 			<Newsletter />
 			<MembershipInfo />
