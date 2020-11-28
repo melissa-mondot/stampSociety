@@ -31,3 +31,5 @@ firebase.json
 firestore.indexes.json
 firestore.rules
 
+# Project
+.env

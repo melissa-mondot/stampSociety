@@ -1,13 +1,9 @@
-
-
 .hero-bg {
-	background-image: url(https://source.unsplash.com/81eOv8Vox8k);
-	background-size: cover;
+  background-image: url(https://source.unsplash.com/81eOv8Vox8k);
+  background-size: cover;
 }
 
 // helpers
 .transparent-bg {
-  background-color: #ffffff50;
+  background-color: rgba($color: #ffffff, $alpha: .7);
 }
-
-

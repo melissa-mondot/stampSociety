@@ -14,6 +14,7 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import InputGroup from "react-bootstrap/InputGroup";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Card from "react-bootstrap/Card";
+import Modal from 'react-bootstrap/Modal'
 export {
 	MainNav,
 	MainFooter,
@@ -29,4 +30,5 @@ export {
 	InputGroup,
 	ButtonGroup,
 	Card,
+	Modal
 };

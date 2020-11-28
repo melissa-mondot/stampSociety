@@ -10,35 +10,37 @@ const EasterSeals = () => {
           {/* small function to check month and apply correct year wouldn't be too hard to implement here */}
           <small>{esData.year} Annual</small>
         </sup>
-        <span class="text-nowrap">Easter Seals</span>
+        <span className="text-nowrap">Easter Seals</span>
       </h1>
-      <div class="row pb-2 pb-lg-5 mx-0">
-        <div class="col-md-5">
+      <div className="row pb-2 pb-lg-5 mx-0">
+        <div className="col-md-5">
           <h3>Benefit Stamp Show</h3>
           <p>{esData.mainDescription}</p>
           <Row>
             <Col>
-              <div class="btn-group pt-2">
+              <div className="btn-group pt-2">
                 <a
                   href="/"
-                  class="btn btn-sm btn-info disabled"
+                  className="btn btn-sm btn-info disabled"
                   disabled=""
                   aria-disabled="true">
                   Download Drawing Entry
                 </a>
                 <a
                   href="mailto:joannebe@pacbell.net"
-                  class="btn btn-sm btn-info">
+                  className="btn btn-sm btn-info">
                   Contact for more info
                 </a>
               </div>
             </Col>
           </Row>
         </div>
-        <div class="col-md-7 pt-2 pt-md-0">
-          <div class="card">
-            <div class="card-header bg-info text-light">Event Information</div>
-            <div class="card-body">
+        <div className="col-md-7 pt-2 pt-md-0">
+          <div className="card">
+            <div className="card-header bg-info text-light">
+              Event Information
+            </div>
+            <div className="card-body">
               <ul>
                 <li>
                   {esData.info.date1} - {esData.info.time1}
@@ -53,10 +55,10 @@ const EasterSeals = () => {
               </ul>
             </div>
           </div>
-          <div class="offset-md-2 pt-2">
-            <div class="card">
-              <div class="card-header bg-dark text-light">Meetings</div>
-              <div class="card-body">
+          <div className="offset-md-2 pt-2">
+            <div className="card">
+              <div className="card-header bg-dark text-light">Meetings</div>
+              <div className="card-body">
                 <ul>
                   <li>{esData.meetings.meeting1}</li>
                   <li>{esData.meetings.meeting2}</li>
