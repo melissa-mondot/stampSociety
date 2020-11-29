@@ -22,7 +22,6 @@ const Newsletter = () => {
     setFormData({
       email: "",
     })
-    handleModalShow()
   }
 
   const createSubRequest = (e) => {
@@ -32,38 +31,49 @@ const Newsletter = () => {
       .then(console.log("newsletter request sent"))
       .catch((err) => console.log(err))
   }
-  console.log(modalShow)
+  // console.log(modalShow)
 
   return (
-    <Container fluid className="bg-secondary py-4">
-      <div className="text-light text-center">
-        <p className="">Want to keep up on our events and news?</p>
-        <p className="lead">
-          Sign up here for upcoming event info and our semi-monthly newsletter.
-        </p>
-      </div>
-      <Container>
-        <Form name="newsletterSubscribe" onSubmit={handleSubmit}>
-          {/* bring down email and raise on click should be implemented here */}
-          <Form.Group controlId="contactForm.email">
-            <Form.Label className="text-light">Email</Form.Label>
-            <InputGroup>
-              <Form.Control
-                required
-                type="email"
-                name="subscriberEmail"
-                placeholder="hello@email.com"
-                value={formData.subscriberEmail || ""}
-                onChange={updateInput}
-                aria-describedby="email"></Form.Control>
-              <InputGroup.Append>
-                <Button type="submit">subscribe</Button>
-              </InputGroup.Append>
-            </InputGroup>
-          </Form.Group>
-        </Form>
+    <>
+      <Modal modalShow={modalShow} onHide={handleModalClose} className="modal">
+        <Modal.Body>Thank you for subscribing!</Modal.Body>
+        <Modal.Footer>
+          <Button onClick={handleModalClose}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+      <Container fluid className="bg-secondary py-4">
+        <Container>
+          <div className="text-light text-center">
+            <p className="">Want to keep up on our events and news?</p>
+            <p className="lead">
+              Sign up here for upcoming event info and our semi-monthly
+              newsletter.
+            </p>
+          </div>
+          <Container>
+            <Form name="newsletterSubscribe" onSubmit={handleSubmit}>
+              {/* bring down email and raise on click should be implemented here */}
+              <Form.Group controlId="contactForm.email">
+                <Form.Label className="text-light">Email</Form.Label>
+                <InputGroup>
+                  <Form.Control
+                    required
+                    type="email"
+                    name="subscriberEmail"
+                    placeholder="hello@email.com"
+                    value={formData.subscriberEmail || ""}
+                    onChange={updateInput}
+                    aria-describedby="email"></Form.Control>
+                  <InputGroup.Append>
+                    <Button type="submit" onClick={handleModalShow}>subscribe</Button>
+                  </InputGroup.Append>
+                </InputGroup>
+              </Form.Group>
+            </Form>
+          </Container>
+        </Container>
       </Container>
-    </Container>
+    </>
   )
 }
 

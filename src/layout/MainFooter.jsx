@@ -12,6 +12,7 @@ import {
   Col,
   Form,
   Row,
+  Modal,
 } from "../layout"
 import logo from "../img/sps-logo-darker-bg.png"
 
@@ -45,12 +46,16 @@ const MainFooter = () => {
 
     FirestoreService.createMessage(contactName, contactEmail, contactMessage)
       .then(console.log("Message sent"))
-      .then(handleModalShow())
       .catch((err) => console.log(err))
   }
-  console.log(modalShow)
+  //   console.log(modalShow)
   return (
     <>
+      <Modal modalShow={modalShow} onHide={handleModalClose}>
+        <Modal.Body>
+          Thank you for your message! We will get back to you soon.{" "}
+        </Modal.Body>
+      </Modal>
       <Container fluid className="bg-dark static-bottom py-5">
         <Row>
           <Col xs={5} md={2}>
@@ -78,14 +83,16 @@ const MainFooter = () => {
                 <Form.Control
                   type="text"
                   name="contactName"
+                  value={formData.contactName || ""}
                   onChange={updateInput}></Form.Control>
               </Form.Group>{" "}
               <Form.Group controlId="contactForm.email">
                 <Form.Label className="text-light">Email</Form.Label>
                 <Form.Control
                   type="email"
-                  placerholder="hello@email.com"
+                  placeholder="hello@email.com"
                   name="contactEmail"
+                  value={formData.contactEmail || ""}
                   onChange={updateInput}></Form.Control>
               </Form.Group>
               <Form.Group controlId="contactForm.message">
@@ -94,9 +101,10 @@ const MainFooter = () => {
                   name="contactMessage"
                   as="textarea"
                   rows="4"
+                  value={formData.contactMessage || ""}
                   onChange={updateInput}></Form.Control>
               </Form.Group>
-              <Button type="submit" size="lg">
+              <Button type="submit" size="lg" onClick={handleModalShow}>
                 Send
               </Button>
             </Form>
