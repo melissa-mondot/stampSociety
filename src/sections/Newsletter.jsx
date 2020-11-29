@@ -35,11 +35,8 @@ const Newsletter = () => {
 
   return (
     <>
-      <Modal modalShow={modalShow} onHide={handleModalClose} className="modal">
+      <Modal show={modalShow} onHide={handleModalClose} className="modal">
         <Modal.Body>Thank you for subscribing!</Modal.Body>
-        <Modal.Footer>
-          <Button onClick={handleModalClose}>Close</Button>
-        </Modal.Footer>
       </Modal>
       <Container fluid className="bg-secondary py-4">
         <Container>

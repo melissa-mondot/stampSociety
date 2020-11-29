@@ -51,7 +51,7 @@ const MainFooter = () => {
   //   console.log(modalShow)
   return (
     <>
-      <Modal modalShow={modalShow} onHide={handleModalClose}>
+      <Modal show={modalShow} onHide={handleModalClose}>
         <Modal.Body>
           Thank you for your message! We will get back to you soon.{" "}
         </Modal.Body>
