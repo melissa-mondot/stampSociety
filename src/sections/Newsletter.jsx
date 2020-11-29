@@ -18,17 +18,17 @@ const Newsletter = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    createRequest()
+    createSubRequest()
     setFormData({
       email: "",
     })
     handleModalShow()
   }
 
-  const createRequest = (e) => {
+  const createSubRequest = (e) => {
     const subscriberEmail = document.newsletterSubscribe.subscriberEmail.value
 
-    FirestoreService.createRequest(subscriberEmail)
+    FirestoreService.createSubRequest(subscriberEmail)
       .then(console.log("newsletter request sent"))
       .catch((err) => console.log(err))
   }
