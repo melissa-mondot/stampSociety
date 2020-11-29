@@ -15,6 +15,7 @@ import InputGroup from "react-bootstrap/InputGroup";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Card from "react-bootstrap/Card";
 import Modal from 'react-bootstrap/Modal'
+import Figure from 'react-bootstrap/Figure'
 export {
 	MainNav,
 	MainFooter,
@@ -30,5 +31,6 @@ export {
 	InputGroup,
 	ButtonGroup,
 	Card,
-	Modal
+	Modal,
+	Figure
 };

@@ -50,15 +50,19 @@ const MainFooter = () => {
   }
   //   console.log(modalShow)
   return (
-    <>
+    <div className="bg-dark">
       <Modal show={modalShow} onHide={handleModalClose}>
         <Modal.Body>
           Thank you for your message! We will get back to you soon.{" "}
         </Modal.Body>
       </Modal>
-      <Container fluid className="bg-dark static-bottom py-5">
+      <Container fluid="lg" className="bg-dark static-bottom py-5">
         <Row>
-          <Col xs={5} md={2}>
+          <Col className="d-flex flex-sm-row flex-md-column">
+            <Navbar.Brand as={Link} to="/">
+              <Image fluid src={logo} className="pr-lg-5" />
+            </Navbar.Brand>
+
             <Navbar variant="dark">
               <Nav className="flex-column">
                 <Nav.Link as={HashLink} to="/sps-leadership?#">
@@ -70,13 +74,8 @@ const MainFooter = () => {
               </Nav>
             </Navbar>
           </Col>
-          <Col xs={7} md={4} className="mt-2">
-            <Navbar.Brand as={Link} to="/">
-              <Image fluid src={logo} />
-            </Navbar.Brand>
-          </Col>
 
-          <Col className="mx-auto" xs={12} md={{ span: 5, offset: 1 }}>
+          <Col xs={12} md={{ span: 6, offset: 3 }} className="mx-auto">
             <Form name="contactForm" onSubmit={handleSubmit} className="pb-3">
               <Form.Group controlId="contactForm.name">
                 <Form.Label className="text-light">Name</Form.Label>
@@ -110,8 +109,16 @@ const MainFooter = () => {
             </Form>
           </Col>
         </Row>
+        <div className="developerInfo mt-5 pt-5">
+          <small>
+            Designed <span>&</span> Developed by{" "}
+            <a href="https://mm-dev-portfolio.firebaseapp.com/">
+              Melissa Mondot
+            </a>
+          </small>
+        </div>
       </Container>
-    </>
+    </div>
   )
 }
 

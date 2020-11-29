@@ -2,53 +2,55 @@ import React from "react"
 import {
   Col,
   Container,
-  Image,
   Row,
   ButtonGroup,
   Button,
-  // Card,
+  Card,
 } from "../layout"
 // import easterSealsMap from "../img/easterSealsMap.png";
 import zoomImage from "../img/zoom.png"
 
 const MembershipInfo = () => {
   return (
-    <Container className="mx-auto my-3">
-      <Row className="d-flex align-items-center">
-        <Col sm={8}>
-          <p className="h3">Curious about stamp collecting?</p>
-          <p>
-            <em>We'd love to meet you!</em> We meet every Wednesday from 7-9 PM
-            with Zoom!.
-          </p>
+    <Container fluid="lg">
+      <Row className="py-3">
+        <Col md={6} lg={3}>
+          <Card>
+            <Card.Body>
+              <Card.Title>Curious about stamp collecting?</Card.Title>
+              <Card.Text>
+                <em>We'd love to meet you!</em> We meet every Wednesday from 7-9
+                PM with Zoom!.
+              </Card.Text>
+              <Card.Img src={zoomImage} />
+            </Card.Body>
+          </Card>
         </Col>
-        <Col xs={4}>
-          <Image fluid src={zoomImage} />
-        </Col>
-        <Col xs={12}>
-          <p className="h2">Ready to join?</p>
-          <p>
-            Great! You'll be joining a fellowship of nearly 200 stamp
-            collectors, novices and experts alike. So whether you're a seasoned
-            or beginner philatelist, you will be in good company.
-          </p>
-          <ButtonGroup>
-            <Button
-              download="spsNewMemberForm"
-              href="../docs/spsNewMemberForm.pdf"
-              role="button">
-              New Members
-            </Button>
-            <Button
-              download="spsReturningMemberForm"
-              href="../docs/spsReturningMemberForm.pdf"
-              role="button">
-              Returning Members
-            </Button>
-          </ButtonGroup>
-          {/* <a href="https://goo.gl/maps/WVBqRsjpko9vxDoT8">
-						<Image fluid src={easterSealsMap} />
-					</a> */}
+        <Col  >
+          <Card>
+            <Card.Body>
+              <Card.Title>Ready to join?</Card.Title>
+              <Card.Text>
+                Great! You'll be joining a fellowship of nearly 200 stamp
+                collectors, novices and experts alike. So whether you're a
+                seasoned or beginner philatelist, you will be in good company.
+              </Card.Text>
+              <ButtonGroup>
+                <Button
+                  download="spsNewMemberForm"
+                  href="../docs/spsNewMemberForm.pdf"
+                  role="button">
+                  New Members
+                </Button>
+                <Button
+                  download="spsReturningMemberForm"
+                  href="../docs/spsReturningMemberForm.pdf"
+                  role="button">
+                  Returning Members
+                </Button>
+              </ButtonGroup>
+            </Card.Body>
+          </Card>
         </Col>
       </Row>
     </Container>

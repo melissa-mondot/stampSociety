@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import * as FirestoreService from "../firebase/firestore"
-import { Container, Form, InputGroup, Button, Modal } from "../layout"
+import { Container, Form, InputGroup, Button, Modal, Row, Col } from "../layout"
 
 const Newsletter = () => {
   const [formData, setFormData] = useState({})
@@ -38,16 +38,16 @@ const Newsletter = () => {
       <Modal show={modalShow} onHide={handleModalClose} className="modal">
         <Modal.Body>Thank you for subscribing!</Modal.Body>
       </Modal>
-      <Container fluid className="bg-secondary py-4">
-        <Container>
-          <div className="text-light text-center">
-            <p className="">Want to keep up on our events and news?</p>
-            <p className="lead">
-              Sign up here for upcoming event info and our semi-monthly
-              newsletter.
-            </p>
-          </div>
-          <Container>
+      <Container fluid="lg" className="bg-secondary py-4">
+        <div className="text-light text-center">
+          <p className="">Want to keep up on our events and news?</p>
+          <p className="lead">
+            Sign up here for upcoming event info and our semi-monthly
+            newsletter.
+          </p>
+        </div>
+        <Row>
+          <Col lg={{ span: 8, offset: 2 }}>
             <Form name="newsletterSubscribe" onSubmit={handleSubmit}>
               {/* bring down email and raise on click should be implemented here */}
               <Form.Group controlId="contactForm.email">
@@ -62,13 +62,15 @@ const Newsletter = () => {
                     onChange={updateInput}
                     aria-describedby="email"></Form.Control>
                   <InputGroup.Append>
-                    <Button type="submit" onClick={handleModalShow}>subscribe</Button>
+                    <Button type="submit" onClick={handleModalShow}>
+                      subscribe
+                    </Button>
                   </InputGroup.Append>
                 </InputGroup>
               </Form.Group>
             </Form>
-          </Container>
-        </Container>
+          </Col>
+        </Row>
       </Container>
     </>
   )

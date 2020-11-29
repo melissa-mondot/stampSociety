@@ -6,14 +6,16 @@ const Events = () => {
   return (
     <Container
       id="events"
-      fluid
+      fluid="lg"
       className="bg-secondary text-light py-3 px-sm-5">
-      <p className="h3">Upcoming Events</p>
-      <p className="font-weight-light">{eventsData.lede}</p>
-      <p>{eventsData.event1} </p>
-      <p>{eventsData.event2} </p>
-      <p>{eventsData.event3} </p>
-      <p>{eventsData.event4} </p>
+      <Container fluid="lg">
+        <p className="h3">Upcoming Events</p>
+        <p className="font-weight-light">{eventsData.lede}</p>
+        <p>{eventsData.event1} </p>
+        <p>{eventsData.event2} </p>
+        <p>{eventsData.event3} </p>
+        <p>{eventsData.event4} </p>
+      </Container>
     </Container>
   )
 }
