@@ -1,14 +1,9 @@
 import React from "react"
-import {
-  Col,
-  Container,
-  Row,
-  ButtonGroup,
-  Button,
-  Card,
-} from "../layout"
+
+import { Col, Container, Row, ButtonGroup, Button, Card } from "../layout"
 // import easterSealsMap from "../img/easterSealsMap.png";
 import zoomImage from "../img/zoom.png"
+// import newMembers from "../docs/"
 
 const MembershipInfo = () => {
   return (
@@ -26,7 +21,7 @@ const MembershipInfo = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col  >
+        <Col>
           <Card>
             <Card.Body>
               <Card.Title>Ready to join?</Card.Title>
@@ -37,16 +32,16 @@ const MembershipInfo = () => {
               </Card.Text>
               <ButtonGroup>
                 <Button
-                  download="spsNewMemberForm"
-                  href="../docs/spsNewMemberForm.pdf"
-                  role="button">
-                  New Members
+                  
+                  href="https://www.dropbox.com/s/z1wcpxd3gjspcb8/spsNewMemberForm.pdf?dl=0"
+                  role="link">
+                 <i class="fab fa-dropbox"></i> New Members
                 </Button>
                 <Button
-                  download="spsReturningMemberForm"
-                  href="../docs/spsReturningMemberForm.pdf"
-                  role="button">
-                  Returning Members
+                  download="spsReturningMemberForm.pdf"
+                  href="https://www.dropbox.com/s/k6kozmq99z6g0fj/spsReturningMemberForm.pdf?dl=0"
+                  role="link">
+                   <i class="fab fa-dropbox"></i> Returning Members
                 </Button>
               </ButtonGroup>
             </Card.Body>

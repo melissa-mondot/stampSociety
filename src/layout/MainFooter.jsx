@@ -68,9 +68,12 @@ const MainFooter = () => {
                 <Nav.Link as={HashLink} to="/sps-leadership?#">
                   Our Members
                 </Nav.Link>
-                <Nav.Link>Registration</Nav.Link>
-                <Nav.Link>Membership</Nav.Link>
-                <Nav.Link>By-Laws</Nav.Link>
+                <Nav.Link disabled>Registration</Nav.Link>
+                <Nav.Link disabled>Membership</Nav.Link>
+                <Nav.Link disabled>By-Laws</Nav.Link>
+                <Nav.Link to="https://www.dropbox.com/sh/xqt6rcc6f2tnbb7/AAANC1kH8mdY5Hvy0BY1LMJMa?dl=0">
+                  Newsletter Archives
+                </Nav.Link>
               </Nav>
             </Navbar>
           </Col>
