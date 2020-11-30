@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import { HashLink } from "react-router-hash-link"
 import * as FirestoreService from "../firebase/firestore"
 
@@ -49,8 +49,14 @@ const MainFooter = () => {
       .catch((err) => console.log(err))
   }
   //   console.log(modalShow)
+
+  const getYear = () => {
+    let d = new Date()
+    return d.getFullYear()
+  }
+
   return (
-    <div className="bg-dark">
+    <div id="footer" className="bg-dark">
       <Modal show={modalShow} onHide={handleModalClose}>
         <Modal.Body>
           Thank you for your message! We will get back to you soon.{" "}
@@ -59,7 +65,7 @@ const MainFooter = () => {
       <Container fluid="lg" className="bg-dark static-bottom py-5">
         <Row>
           <Col className="d-flex flex-sm-row flex-md-column">
-            <Navbar.Brand as={Link} to="/">
+            <Navbar.Brand as={HashLink} to="/?#top">
               <Image fluid src={logo} className="pr-lg-5" />
             </Navbar.Brand>
 
@@ -71,7 +77,7 @@ const MainFooter = () => {
                 <Nav.Link disabled>Registration</Nav.Link>
                 <Nav.Link disabled>Membership</Nav.Link>
                 <Nav.Link disabled>By-Laws</Nav.Link>
-                <Nav.Link to="https://www.dropbox.com/sh/xqt6rcc6f2tnbb7/AAANC1kH8mdY5Hvy0BY1LMJMa?dl=0">
+                <Nav.Link href="https://www.dropbox.com/sh/xqt6rcc6f2tnbb7/AAANC1kH8mdY5Hvy0BY1LMJMa?dl=0">
                   Newsletter Archives
                 </Nav.Link>
               </Nav>
@@ -79,10 +85,15 @@ const MainFooter = () => {
           </Col>
 
           <Col xs={12} md={{ span: 6, offset: 3 }} className="mx-auto">
-            <Form name="contactForm" onSubmit={handleSubmit} className="pb-3">
+            <Form
+              id="contactForm"
+              name="contactForm"
+              onSubmit={handleSubmit}
+              className="pb-3">
               <Form.Group controlId="contactForm.name">
                 <Form.Label className="text-light">Name</Form.Label>
                 <Form.Control
+                  autofocus
                   type="text"
                   name="contactName"
                   value={formData.contactName || ""}
@@ -112,7 +123,11 @@ const MainFooter = () => {
             </Form>
           </Col>
         </Row>
+
         <div className="developerInfo mt-5 pt-5">
+          <small>
+            Sacramento Philatelic Society, All Rights Reserved {getYear()}
+          </small><br/>
           <small>
             Designed <span>&</span> Developed by{" "}
             <a href="https://mm-dev-portfolio.firebaseapp.com/">

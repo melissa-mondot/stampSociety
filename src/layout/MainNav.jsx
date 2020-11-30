@@ -24,10 +24,10 @@ const MainNav = () => {
 							<Nav.Link as={HashLink} to="/?#history">
 								History
 							</Nav.Link>
-							<Nav.Link as={HashLink} to="/?#more">
+							<Nav.Link as={HashLink} to="/?#footer">
 								More
 							</Nav.Link>
-							<Button>Contact Us</Button>
+							<Button as={HashLink} to="/?#contactForm">Contact Us</Button>
 						</Nav>
 					</Navbar.Collapse>
 				</Navbar>

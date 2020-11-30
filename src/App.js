@@ -1,12 +1,12 @@
 import React from "react";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { MainNav, MainFooter } from "./layout";
 import { Home, Leadership } from "./views";
 
 function App() {
 	return (
 		<div className="App">
-			<MainNav />
+			<MainNav id="top" />
 			{/* main view */}
 			<Switch>
 				<Route exact path="/" component={Home} />
