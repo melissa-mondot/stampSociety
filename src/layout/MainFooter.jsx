@@ -14,7 +14,7 @@ import {
   Row,
   Modal,
 } from "../layout"
-import logo from "../img/sps-logo-darker-bg.png"
+import logo from "../img/spsLogo.png"
 
 const MainFooter = () => {
   const [formData, setFormData] = useState({})
@@ -75,7 +75,7 @@ const MainFooter = () => {
                   Our Members
                 </Nav.Link>
                 <Nav.Link disabled>Registration</Nav.Link>
-                <Nav.Link disabled>Membership</Nav.Link>
+                <Nav.Link as={HashLink} to="/?#membership">Membership</Nav.Link>
                 <Nav.Link disabled>By-Laws</Nav.Link>
                 <Nav.Link href="https://www.dropbox.com/sh/xqt6rcc6f2tnbb7/AAANC1kH8mdY5Hvy0BY1LMJMa?dl=0">
                   Newsletter Archives

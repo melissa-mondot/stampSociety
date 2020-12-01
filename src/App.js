@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { MainNav, MainFooter } from "./layout";
 import { Home, Leadership } from "./views";
+import "./scss/main.scss";
 
 function App() {
 	return (

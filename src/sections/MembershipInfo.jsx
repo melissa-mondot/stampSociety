@@ -7,7 +7,7 @@ import zoomImage from "../img/zoom.png"
 
 const MembershipInfo = () => {
   return (
-    <Container fluid="lg">
+    <Container id="membership" fluid="lg">
       <Row className="py-3">
         <Col md={6} lg={3}>
           <Card>
